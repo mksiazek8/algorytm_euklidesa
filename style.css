@@ -1,0 +1,38 @@
+body{
+    background-color:bisque;
+    border-style: groove;
+    border-color: brown;
+    border-width: 20px;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cpp{
+    margin-left: 40%;
+    margin-right: 40%;
+    padding-bottom: 10px;
+}
+.js{
+    margin-left: 40%;
+    margin-right: 37%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.python{
+    margin-left: 45%;
+    margin-right: 42%;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+div{
+    text-align: center;
+}

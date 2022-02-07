@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+    <html lang="pl">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Algorytm Euklidesa</title>
+
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+
+            function nwd(a, b) {
+            if(a == 0)
+            return b;
+            return nwd(b%a, a);
+            }
+            function policz() {
+            var _a = document.getElementById('a').value;
+            var _b = document.getElementById('b').value;
+
+            document.getElementById('nwd').innerHTML = nwd(_a, _b);
+}
+
+        </script>
+
+    </head>
+
+<body>
+    
+    <h1>Algorytm Euklidesa</h1>
+
+    <br>
+    <br>
+
+    <h2>Schemat blokowy</h2>
+
+    <br>
+    <br>
+
+    <img src="img/1.png" alt="schemat blokowy algorytmu euklidesa" class="center">
+
+    <br>
+    <br>
+
+    <h2>Kod C++</h2>
+
+    <pre class="cpp" style='color:#000000;background:#ffffff;'><span style='color:#004a43; '> </span><span style='color:#004a43; '>
+        #</span><span style='color:#004a43; '>include</span><span style='color:#004a43; '> </span>
+
+        <span style='color:#800000; font-weight:bold; '>using</span> <span style='color:#800000; font-weight:bold; '>namespace</span> <span style='color:#666616; '>std</span><span style='color:#800080; '>;</span>
+        
+        <span style='color:#800000; font-weight:bold; '>int</span> <span style='color:#400000; '>main</span><span style='color:#808030; '>(</span> <span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+          <span style='color:#800000; font-weight:bold; '>unsigned</span> <span style='color:#800000; font-weight:bold; '>int</span> a<span style='color:#808030; '>,</span> b<span style='color:#800080; '>;</span>
+        
+          <span style='color:#603000; '>cin</span> <span style='color:#808030; '>></span><span style='color:#808030; '>></span> a <span style='color:#808030; '>></span><span style='color:#808030; '>></span> b<span style='color:#800080; '>;</span>
+          <span style='color:#800000; font-weight:bold; '>while</span><span style='color:#808030; '>(</span> a <span style='color:#808030; '>!</span><span style='color:#808030; '>=</span> b <span style='color:#808030; '>)</span>
+            <span style='color:#800000; font-weight:bold; '>if</span><span style='color:#808030; '>(</span> a <span style='color:#808030; '>&lt;</span> b <span style='color:#808030; '>)</span> b <span style='color:#808030; '>-</span><span style='color:#808030; '>=</span> a<span style='color:#800080; '>;</span> <span style='color:#800000; font-weight:bold; '>else</span> a <span style='color:#808030; '>-</span><span style='color:#808030; '>=</span> b<span style='color:#800080; '>;</span>
+          <span style='color:#603000; '>cout</span> <span style='color:#808030; '>&lt;</span><span style='color:#808030; '>&lt;</span> a <span style='color:#808030; '>&lt;</span><span style='color:#808030; '>&lt;</span> <span style='color:#603000; '>endl</span><span style='color:#800080; '>;</span>
+          <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+        <span style='color:#800080; '>}</span>
+    </pre>
+
+    <br>
+    <br>
+
+    <h2>Oblicz NWD</h2>
+
+    <div>
+        Podaj a <input type="number" id="a" value="1">
+        Podaj b <input type="number" id="b" value="100">
+        <input type = "button" value = "Pokaż" onclick = "policz()">
+    </div>
+    <br>
+    <div id="nwd">...</div>
+
+    <h2>Kod Javascript</h2>
+
+    <pre class="js" style='color:#000000;background:#ffffff;'>    <span style='color:#808030; '>&lt;</span>script<span style='color:#808030; '>></span>
+        <span style='color:#800000; font-weight:bold; '>function</span> NWD<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+        <span style='color:#800080; '>{</span>
+            <span style='color:#800000; font-weight:bold; '>var</span> a <span style='color:#808030; '>=</span> document<span style='color:#808030; '>.</span>getElementById<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>a</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>value<span style='color:#800080; '>;</span>
+            <span style='color:#800000; font-weight:bold; '>var</span> b <span style='color:#808030; '>=</span> document<span style='color:#808030; '>.</span>getElementById<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>b</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>value<span style='color:#800080; '>;</span>
+            <span style='color:#800000; font-weight:bold; '>var</span> w <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+            
+            <span style='color:#800000; font-weight:bold; '>while</span><span style='color:#808030; '>(</span>a<span style='color:#808030; '>&lt;</span>b<span style='color:#808030; '>)</span> b <span style='color:#808030; '>-</span><span style='color:#808030; '>=</span> a <span style='color:#800000; font-weight:bold; '>else</span> a <span style='color:#808030; '>-</span><span style='color:#808030; '>=</span> b<span style='color:#800080; '>;</span>
+            t <span style='color:#808030; '>=</span> a<span style='color:#800080; '>;</span>
+            
+            document<span style='color:#808030; '>.</span>getElementById<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>wynik</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>innerHTML <span style='color:#808030; '>=</span> w<span style='color:#800080; '>;</span>
+            
+        <span style='color:#800080; '>}</span>
+    <span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>script<span style='color:#808030; '>></span>
+    </pre>
+    
+
+    <h2>Kod Python</h2>
+
+    <pre class="python" style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>def</span> NWD<span style='color:#808030; '>(</span>a<span style='color:#808030; '>,</span> b<span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+        <span style='color:#800000; font-weight:bold; '>while</span>  a <span style='color:#44aadd; '>!=</span> b<span style='color:#808030; '>:</span>
+            <span style='color:#800000; font-weight:bold; '>if</span> a <span style='color:#44aadd; '>></span> b<span style='color:#808030; '>:</span>
+                a <span style='color:#808030; '>=</span> a <span style='color:#44aadd; '>-</span> b
+            <span style='color:#800000; font-weight:bold; '>else</span><span style='color:#808030; '>:</span>
+                b <span style='color:#808030; '>=</span> b <span style='color:#44aadd; '>-</span> a
+        <span style='color:#800000; font-weight:bold; '>return</span> a
+    
+    a<span style='color:#808030; '>=</span><span style='color:#400000; '>int</span><span style='color:#808030; '>(</span><span style='color:#400000; '>input</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+    b<span style='color:#808030; '>=</span><span style='color:#400000; '>int</span><span style='color:#808030; '>(</span><span style='color:#400000; '>input</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+    <span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span>NWD<span style='color:#808030; '>(</span>a<span style='color:#808030; '>,</span>b<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+    </pre>
+
+</body>
+
+</html>
